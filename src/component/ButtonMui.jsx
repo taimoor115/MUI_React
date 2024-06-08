@@ -1,7 +1,31 @@
-import { Button, Stack, ButtonGroup } from "@mui/material";
+import {
+  Button,
+  Stack,
+  ButtonGroup,
+  ToggleButton,
+  ToggleButtonGroup,
+} from "@mui/material";
+import { useState } from "react";
 
-import { Send } from "@mui/icons-material";
+import {
+  Send,
+  FormatBold,
+  FormatItalic,
+  FormatUnderlined,
+} from "@mui/icons-material";
 const ButtonMui = () => {
+  const [value, setValue] = useState([]);
+  const [exclusive, setExclusive] = useState("" || null);
+
+  const handleChange = (e, value) => {
+    setValue(value);
+  };
+
+  const handleChangeEvent = (e, value) => {
+    setExclusive(value);
+  };
+  console.log(exclusive);
+
   return (
     <Stack spacing={4}>
       <Stack spacing={2} direction="row">
@@ -54,6 +78,27 @@ const ButtonMui = () => {
           <Button>Center</Button>
           <Button>Right</Button>
         </ButtonGroup>
+      </Stack>
+
+      <Stack>
+        <ToggleButtonGroup
+          value={exclusive}
+          onChange={handleChangeEvent}
+          exclusive
+          size="small"
+          orientation="horizontal"
+          color="secondary"
+        >
+          <ToggleButton value="italic">
+            <FormatItalic />
+          </ToggleButton>
+          <ToggleButton value="bold">
+            <FormatBold />
+          </ToggleButton>
+          <ToggleButton value="underlined">
+            <FormatUnderlined />
+          </ToggleButton>
+        </ToggleButtonGroup>
       </Stack>
     </Stack>
   );
