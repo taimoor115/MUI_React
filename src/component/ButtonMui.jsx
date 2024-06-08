@@ -1,4 +1,4 @@
-import { Button, Stack } from "@mui/material";
+import { Button, Stack, ButtonGroup } from "@mui/material";
 
 import { Send } from "@mui/icons-material";
 const ButtonMui = () => {
@@ -41,6 +41,19 @@ const ButtonMui = () => {
         >
           Send
         </Button>
+      </Stack>
+
+      <Stack spacing={2} direction="row">
+        <ButtonGroup
+          variant="contained"
+          size="small"
+          orientation="vertical"
+          aria-label="alignement button group"
+        >
+          <Button>Left</Button>
+          <Button>Center</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
       </Stack>
     </Stack>
   );
