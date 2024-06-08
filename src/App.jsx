@@ -1,11 +1,10 @@
-import { Typography } from "@mui/material";
 import React from "react";
-import TypographyMui from "./component/TypographyMui";
+import ButtonMui from "./component/ButtonMui";
 
 const App = () => {
   return (
     <div>
-      <TypographyMui />
+      <ButtonMui />
     </div>
   );
 };
