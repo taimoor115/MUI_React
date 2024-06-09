@@ -1,12 +1,9 @@
 import React from "react";
 import GridMui from "./component/GridMui";
+import Navbar from "./component/Navbar";
 
 const App = () => {
-  return (
-    <div>
-      <GridMui />
-    </div>
-  );
+  return <Navbar />;
 };
 
 export default App;
