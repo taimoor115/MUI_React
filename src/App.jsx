@@ -1,10 +1,10 @@
 import React from "react";
-import BoxMui from "./component/BoxMui";
+import GridMui from "./component/GridMui";
 
 const App = () => {
   return (
     <div>
-      <BoxMui />
+      <GridMui />
     </div>
   );
 };
