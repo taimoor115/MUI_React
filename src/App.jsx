@@ -1,12 +1,10 @@
 import React from "react";
-import ButtonMui from "./component/ButtonMui";
-import TextFieldMui from "./component/TextFieldMui";
-import SwitchMui from "./component/SwitchMui";
+import BoxMui from "./component/BoxMui";
 
 const App = () => {
   return (
     <div>
-      <SwitchMui />
+      <BoxMui />
     </div>
   );
 };
